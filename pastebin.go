@@ -40,7 +40,7 @@ func (pb *pastebin) NewPaste(code, name string, visibility Visibility, expireDat
 
 	var err error
 	var res *http.Response
-	if res, err = http.PostForm("http://pastebin.com/api/api_post.php", values); err != nil {
+	if res, err = http.PostForm("https://pastebin.com/api/api_post.php", values); err != nil {
 		return "", err
 	}
 	defer res.Body.Close()
